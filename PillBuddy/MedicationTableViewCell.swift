@@ -43,7 +43,6 @@ class MedicationTableViewCell: UITableViewCell {
         let label = UILabel()
         
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         label.font = UIFont(name: "Averia Libre", size: 18)
         
         return label
@@ -53,7 +52,6 @@ class MedicationTableViewCell: UITableViewCell {
         let label = UILabel()
         
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         label.font = UIFont(name: "Averia Libre", size: 18)
         
         return label
@@ -81,9 +79,9 @@ class MedicationTableViewCell: UITableViewCell {
         addSubview(daysLeftLabel)
         
         NSLayoutConstraint.activate([
-            cellView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            cellView.topAnchor.constraint(equalTo: topAnchor, constant: 4),
             cellView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cellView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            cellView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
             cellView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
             orangeBottle.topAnchor.constraint(equalTo: cellView.topAnchor, constant: 44),

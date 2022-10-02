@@ -10,7 +10,11 @@ import UIKit
 class ViewController: UIViewController {
     private let tableView = UITableView()
     
-    var medications: [String] = ["Hello", "World", "!"]
+    var medications: [Medication] = [
+        Medication(name: "Advil", dosage: 500, daysLeft: 5),
+        Medication(name: "Allegra", dosage: 500, daysLeft: 1),
+        Medication(name: "Vitamin D", dosage: 2000, daysLeft: 4)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +28,16 @@ class ViewController: UIViewController {
     
     private func setupTableView() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MedicationTableViewCell.self, forCellReuseIdentifier: "MedicationCell")
         tableView.backgroundColor = .clear
+        tableView.rowHeight = 138
     }
     
     private func setupSubviews() {
         view.backgroundColor = K.Colors.blueColor
         
         view.addSubview(roundedFrame)
-        view.addSubview(clearBottleImageView)
+        view.addSubview(clearBottle)
         view.addSubview(emptyLabel)
         view.addSubview(tableView)
         
@@ -42,10 +47,10 @@ class ViewController: UIViewController {
             roundedFrame.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             roundedFrame.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             
-            clearBottleImageView.topAnchor.constraint(equalTo: roundedFrame.topAnchor, constant: 110),
-            clearBottleImageView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            clearBottle.topAnchor.constraint(equalTo: roundedFrame.topAnchor, constant: 110),
+            clearBottle.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             
-            emptyLabel.topAnchor.constraint(equalTo: clearBottleImageView.bottomAnchor, constant: 20),
+            emptyLabel.topAnchor.constraint(equalTo: clearBottle.bottomAnchor, constant: 20),
             emptyLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             
             tableView.topAnchor.constraint(equalTo: roundedFrame.topAnchor, constant: 10),
@@ -67,7 +72,7 @@ class ViewController: UIViewController {
         return frame
     }() // on first access of `roundedFrame`, this block will be executed to init roundedFrame
     
-    private lazy var clearBottleImageView: UIImageView = {
+    private lazy var clearBottle: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -101,15 +106,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (medications.count != 0) {
-            clearBottleImageView.isHidden = true
+            clearBottle.isHidden = true
             emptyLabel.isHidden = true
         }
         
         return medications.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = medications[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath) as! MedicationTableViewCell
+        cell.medication = medications[indexPath.row]
         return cell
     }
 }

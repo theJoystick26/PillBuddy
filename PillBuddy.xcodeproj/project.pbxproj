@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5801DB7628E8D17000425C67 /* MedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801DB7528E8D17000425C67 /* MedicationTableViewCell.swift */; };
 		5831033928D4B5C100C9800F /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5831033828D4B5C100C9800F /* K.swift */; };
 		5831034128D5751B00C9800F /* AveriaLibre-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5831033B28D5751B00C9800F /* AveriaLibre-Regular.ttf */; };
 		5831034228D5751B00C9800F /* AveriaLibre-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5831033C28D5751B00C9800F /* AveriaLibre-BoldItalic.ttf */; };
@@ -14,6 +15,7 @@
 		5831034428D5751B00C9800F /* AveriaLibre-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5831033E28D5751B00C9800F /* AveriaLibre-Light.ttf */; };
 		5831034528D5751B00C9800F /* AveriaLibre-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5831033F28D5751B00C9800F /* AveriaLibre-Bold.ttf */; };
 		5831034628D5751C00C9800F /* AveriaLibre-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5831034028D5751B00C9800F /* AveriaLibre-LightItalic.ttf */; };
+		58C0E81728E91C8E00981090 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0E81628E91C8E00981090 /* Medication.swift */; };
 		58EEE51F28D0F33D0028C722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEE51E28D0F33D0028C722 /* AppDelegate.swift */; };
 		58EEE52128D0F33D0028C722 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEE52028D0F33D0028C722 /* SceneDelegate.swift */; };
 		58EEE52328D0F33D0028C722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEE52228D0F33D0028C722 /* ViewController.swift */; };
@@ -22,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5801DB7528E8D17000425C67 /* MedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTableViewCell.swift; sourceTree = "<group>"; };
 		5831033828D4B5C100C9800F /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		5831033B28D5751B00C9800F /* AveriaLibre-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaLibre-Regular.ttf"; sourceTree = "<group>"; };
 		5831033C28D5751B00C9800F /* AveriaLibre-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaLibre-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		5831033E28D5751B00C9800F /* AveriaLibre-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaLibre-Light.ttf"; sourceTree = "<group>"; };
 		5831033F28D5751B00C9800F /* AveriaLibre-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaLibre-Bold.ttf"; sourceTree = "<group>"; };
 		5831034028D5751B00C9800F /* AveriaLibre-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaLibre-LightItalic.ttf"; sourceTree = "<group>"; };
+		58C0E81628E91C8E00981090 /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
 		58EEE51B28D0F33D0028C722 /* PillBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EEE51E28D0F33D0028C722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58EEE52028D0F33D0028C722 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			children = (
 				58EEE51E28D0F33D0028C722 /* AppDelegate.swift */,
 				58EEE52028D0F33D0028C722 /* SceneDelegate.swift */,
+				5801DB7528E8D17000425C67 /* MedicationTableViewCell.swift */,
+				58C0E81628E91C8E00981090 /* Medication.swift */,
 				58EEE52228D0F33D0028C722 /* ViewController.swift */,
 				5831033828D4B5C100C9800F /* K.swift */,
 				58EEE52728D0F33F0028C722 /* Assets.xcassets */,
@@ -173,6 +179,8 @@
 				5831033928D4B5C100C9800F /* K.swift in Sources */,
 				58EEE51F28D0F33D0028C722 /* AppDelegate.swift in Sources */,
 				58EEE52128D0F33D0028C722 /* SceneDelegate.swift in Sources */,
+				58C0E81728E91C8E00981090 /* Medication.swift in Sources */,
+				5801DB7628E8D17000425C67 /* MedicationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,15 +6,16 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     private let tableView = UITableView()
     
-    var medications: [Medication] = [
-        Medication(name: "Advil", dosage: 500, daysLeft: 5),
-        Medication(name: "Allegra", dosage: 500, daysLeft: 1),
-        Medication(name: "Vitamin D", dosage: 2000, daysLeft: 4)
-    ]
+    // getting the view context from the AppDelegate's persistent container (Core Data Store)
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var medications: [Medication]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,9 @@ class ViewController: UIViewController {
         
         setupTableView()
         setupSubviews()
+        
+        // Get medications from Core Data
+        fetchMedications()
     }
     
     private func setupTableView() {
@@ -105,17 +109,32 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (medications.count != 0) {
+        if (medications?.count != 0) {
             clearBottle.isHidden = true
             emptyLabel.isHidden = true
         }
         
-        return medications.count
+        return medications?.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath) as! MedicationTableViewCell
-        cell.medication = medications[indexPath.row]
+        cell.medication = medications?[indexPath.row]
         return cell
+    }
+}
+
+// Core Data Methods
+
+extension ViewController {
+    func fetchMedications() {
+        do {
+            self.medications = try context.fetch(Medication.fetchRequest())
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        catch {
+        }
     }
 }
 

@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         view.addSubview(roundedFrame)
         view.addSubview(clearBottle)
         view.addSubview(emptyLabel)
+        view.addSubview(addButton)
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
@@ -57,6 +58,11 @@ class ViewController: UIViewController {
             emptyLabel.topAnchor.constraint(equalTo: clearBottle.bottomAnchor, constant: 20),
             emptyLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             
+            addButton.widthAnchor.constraint(equalToConstant: 65),
+            addButton.heightAnchor.constraint(equalToConstant: 65),
+            addButton.bottomAnchor.constraint(equalTo: roundedFrame.bottomAnchor, constant: -20),
+            addButton.trailingAnchor.constraint(equalTo: roundedFrame.trailingAnchor, constant: -15),
+
             tableView.topAnchor.constraint(equalTo: roundedFrame.topAnchor, constant: 10),
             tableView.leadingAnchor.constraint(equalTo: roundedFrame.leadingAnchor, constant: 10),
             tableView.bottomAnchor.constraint(greaterThanOrEqualTo: roundedFrame.bottomAnchor, constant: -10),
@@ -101,6 +107,24 @@ class ViewController: UIViewController {
         label.widthAnchor.constraint(equalToConstant: 210).isActive = true
         
         return label
+    }()
+    
+    private lazy var addButton: UIButton = {
+        let button = UIButton(type: .custom)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.frame = CGRect(x: 0, y: 0, width: 65, height: 65)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.clipsToBounds = true
+        button.setImage(UIImage(systemName: "plus"), for: .normal)
+        // scales image size
+        button.imageView?.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
+        
+        button.backgroundColor = K.Colors.whiteColor
+        button.tintColor = K.Colors.blueColor
+        
+        return button
     }()
 }
 

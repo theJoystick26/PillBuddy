@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ListViewController.swift
 //  PillBuddy
 //
 //  Created by Adin Joyce on 9/13/22.
@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ListViewController: UIViewController {
     private let tableView = UITableView()
     
     // getting the view context from the AppDelegate's persistent container (Core Data Store)
@@ -43,8 +43,8 @@ class ViewController: UIViewController {
         view.addSubview(roundedFrame)
         view.addSubview(clearBottle)
         view.addSubview(emptyLabel)
-        view.addSubview(addButton)
         view.addSubview(tableView)
+        view.addSubview(addButton)
         
         NSLayoutConstraint.activate([
             roundedFrame.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -124,11 +124,23 @@ class ViewController: UIViewController {
         button.backgroundColor = K.Colors.whiteColor
         button.tintColor = K.Colors.blueColor
         
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        
         return button
     }()
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+// MARK: - Button Methods
+
+extension ListViewController {
+    @objc func buttonPressed(sender: UIButton!) {
+        print("Button tapped")
+    }
+}
+
+// MARK: - TableView Methods
+
+extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -149,7 +161,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 // Core Data Methods
 
-extension ViewController {
+extension ListViewController {
     func fetchMedications() {
         do {
             self.medications = try context.fetch(Medication.fetchRequest())

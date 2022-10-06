@@ -15,12 +15,13 @@
 		5831034428D5751B00C9800F /* AveriaLibre-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5831033E28D5751B00C9800F /* AveriaLibre-Light.ttf */; };
 		5831034528D5751B00C9800F /* AveriaLibre-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5831033F28D5751B00C9800F /* AveriaLibre-Bold.ttf */; };
 		5831034628D5751C00C9800F /* AveriaLibre-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5831034028D5751B00C9800F /* AveriaLibre-LightItalic.ttf */; };
+		583BD67728EF617F00EBED5B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583BD67628EF617F00EBED5B /* AddViewController.swift */; };
 		5847582528EBAB4400C04528 /* PillBuddyDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5847582328EBAB4400C04528 /* PillBuddyDB.xcdatamodeld */; };
 		5847582828EBAB7E00C04528 /* Medication+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847582628EBAB7E00C04528 /* Medication+CoreDataClass.swift */; };
 		5847582928EBAB7E00C04528 /* Medication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847582728EBAB7E00C04528 /* Medication+CoreDataProperties.swift */; };
 		58EEE51F28D0F33D0028C722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEE51E28D0F33D0028C722 /* AppDelegate.swift */; };
 		58EEE52128D0F33D0028C722 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEE52028D0F33D0028C722 /* SceneDelegate.swift */; };
-		58EEE52328D0F33D0028C722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEE52228D0F33D0028C722 /* ViewController.swift */; };
+		58EEE52328D0F33D0028C722 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEE52228D0F33D0028C722 /* ListViewController.swift */; };
 		58EEE52828D0F33F0028C722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58EEE52728D0F33F0028C722 /* Assets.xcassets */; };
 		58EEE52B28D0F33F0028C722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58EEE52928D0F33F0028C722 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -34,13 +35,14 @@
 		5831033E28D5751B00C9800F /* AveriaLibre-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaLibre-Light.ttf"; sourceTree = "<group>"; };
 		5831033F28D5751B00C9800F /* AveriaLibre-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaLibre-Bold.ttf"; sourceTree = "<group>"; };
 		5831034028D5751B00C9800F /* AveriaLibre-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaLibre-LightItalic.ttf"; sourceTree = "<group>"; };
+		583BD67628EF617F00EBED5B /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		5847582428EBAB4400C04528 /* PillBuddyDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PillBuddyDB.xcdatamodel; sourceTree = "<group>"; };
 		5847582628EBAB7E00C04528 /* Medication+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medication+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5847582728EBAB7E00C04528 /* Medication+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medication+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		58EEE51B28D0F33D0028C722 /* PillBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EEE51E28D0F33D0028C722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58EEE52028D0F33D0028C722 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58EEE52228D0F33D0028C722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58EEE52228D0F33D0028C722 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		58EEE52728D0F33F0028C722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58EEE52A28D0F33F0028C722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58EEE52C28D0F33F0028C722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +104,8 @@
 				58EEE52028D0F33D0028C722 /* SceneDelegate.swift */,
 				5847582228EBAB1800C04528 /* Model */,
 				5801DB7528E8D17000425C67 /* MedicationTableViewCell.swift */,
-				58EEE52228D0F33D0028C722 /* ViewController.swift */,
+				58EEE52228D0F33D0028C722 /* ListViewController.swift */,
+				583BD67628EF617F00EBED5B /* AddViewController.swift */,
 				5831033828D4B5C100C9800F /* K.swift */,
 				5847582328EBAB4400C04528 /* PillBuddyDB.xcdatamodeld */,
 				58EEE52728D0F33F0028C722 /* Assets.xcassets */,
@@ -190,7 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5847582828EBAB7E00C04528 /* Medication+CoreDataClass.swift in Sources */,
-				58EEE52328D0F33D0028C722 /* ViewController.swift in Sources */,
+				58EEE52328D0F33D0028C722 /* ListViewController.swift in Sources */,
+				583BD67728EF617F00EBED5B /* AddViewController.swift in Sources */,
 				5831033928D4B5C100C9800F /* K.swift in Sources */,
 				58EEE51F28D0F33D0028C722 /* AppDelegate.swift in Sources */,
 				58EEE52128D0F33D0028C722 /* SceneDelegate.swift in Sources */,

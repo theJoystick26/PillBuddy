@@ -134,7 +134,9 @@ class ListViewController: UIViewController {
 
 extension ListViewController {
     @objc func buttonPressed(sender: UIButton!) {
-        print("Button tapped")
+        let addVC = AddViewController()
+        addVC.modalPresentationStyle = .fullScreen
+        self.present(addVC, animated: true, completion: nil)
     }
 }
 
